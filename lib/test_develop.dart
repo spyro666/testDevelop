@@ -10,7 +10,7 @@ class Calculator {
 
 class Utility {
   
- static internetCheck() async {
+ static Future<bool> internetCheck() async {
     final response = await http.get('https://google.it');
     if (response.statusCode == 200) {
       return true;
