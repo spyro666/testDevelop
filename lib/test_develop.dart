@@ -1,6 +1,5 @@
 library test_develop;
 
-import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 /// A Calculator.
@@ -11,7 +10,7 @@ class Calculator {
 
 class Utility {
   
-  internetCheck() async {
+ static internetCheck() async {
     final response = await http.get('https://google.it');
     if (response.statusCode == 200) {
       return true;
